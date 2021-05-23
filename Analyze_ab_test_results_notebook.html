@@ -15497,7 +15497,7 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.8804418140527149</pre>
+<pre>0.880668914734017</pre>
 </div>
 
 </div>
@@ -15541,7 +15541,7 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.8797995511929182</pre>
+<pre>0.8789046904470174</pre>
 </div>
 
 </div>
@@ -15585,7 +15585,7 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.0006422628597967384</pre>
+<pre>0.0017642242869996272</pre>
 </div>
 
 </div>
@@ -15607,11 +15607,9 @@ dtype: int64</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p_diffs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
-    <span class="n">new_page_converted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_new</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="n">con_rate</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">con_rate</span><span class="p">])</span>
-    <span class="n">old_page_converted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_old</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="n">con_rate</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">con_rate</span><span class="p">])</span>
-    <span class="n">p_diffs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">new_page_converted</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n">old_page_converted</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-<span class="n">p_diffs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">p_diffs</span><span class="p">)</span>
+<span class="n">new_page_converted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">n_new</span><span class="p">,</span> <span class="n">con_rate</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span><span class="o">/</span><span class="n">n_new</span>
+<span class="n">old_page_converted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">n_old</span><span class="p">,</span> <span class="n">con_rate</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span><span class="o">/</span><span class="n">n_old</span>
+<span class="n">p_diffs</span> <span class="o">=</span> <span class="n">new_page_converted</span> <span class="o">-</span> <span class="n">old_page_converted</span>
 </pre></div>
 
      </div>
@@ -15658,12 +15656,12 @@ dtype: int64</pre>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Created with matplotlib (https://matplotlib.org/) -->
-<svg height="251.403603pt" version="1.1" viewBox="0 0 381.65 251.403603" width="381.65pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg height="248.518125pt" version="1.1" viewBox="0 0 381.65 248.518125" width="381.65pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <metadata>
   <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2021-05-21T16:48:08.169082</dc:date>
+    <dc:date>2021-05-23T09:06:17.663608</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -15678,8 +15676,8 @@ dtype: int64</pre>
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M -0 251.403603 
-L 381.65 251.403603 
+   <path d="M -0 248.518125 
+L 381.65 248.518125 
 L 381.65 0 
 L -0 0 
 z
@@ -15687,106 +15685,106 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 39.65 227.525478 
-L 374.45 227.525478 
-L 374.45 10.085478 
-L 39.65 10.085478 
+    <path d="M 39.65 224.64 
+L 374.45 224.64 
+L 374.45 7.2 
+L 39.65 7.2 
 z
 " style="fill:#ffffff;"/>
    </g>
    <g id="patch_3">
-    <path clip-path="url(#pe6b794c777)" d="M 54.868182 227.525478 
-L 80.231818 227.525478 
-L 80.231818 226.832594 
-L 54.868182 226.832594 
+    <path clip-path="url(#p7fa2889874)" d="M 54.868182 224.64 
+L 80.231818 224.64 
+L 80.231818 224.087561 
+L 54.868182 224.087561 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_4">
-    <path clip-path="url(#pe6b794c777)" d="M 80.231818 227.525478 
-L 105.595455 227.525478 
-L 105.595455 224.580721 
-L 80.231818 224.580721 
+    <path clip-path="url(#p7fa2889874)" d="M 80.231818 224.64 
+L 105.595455 224.64 
+L 105.595455 221.246446 
+L 80.231818 221.246446 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_5">
-    <path clip-path="url(#pe6b794c777)" d="M 105.595455 227.525478 
-L 130.959091 227.525478 
-L 130.959091 207.691673 
-L 105.595455 207.691673 
+    <path clip-path="url(#p7fa2889874)" d="M 105.595455 224.64 
+L 130.959091 224.64 
+L 130.959091 203.568397 
+L 105.595455 203.568397 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_6">
-    <path clip-path="url(#pe6b794c777)" d="M 130.959091 227.525478 
-L 156.322727 227.525478 
-L 156.322727 162.047937 
-L 130.959091 162.047937 
+    <path clip-path="url(#p7fa2889874)" d="M 130.959091 224.64 
+L 156.322727 224.64 
+L 156.322727 148.482334 
+L 130.959091 148.482334 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_7">
-    <path clip-path="url(#pe6b794c777)" d="M 156.322727 227.525478 
-L 181.686364 227.525478 
-L 181.686364 82.972547 
-L 156.322727 82.972547 
+    <path clip-path="url(#p7fa2889874)" d="M 156.322727 224.64 
+L 181.686364 224.64 
+L 181.686364 58.198014 
+L 156.322727 58.198014 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_8">
-    <path clip-path="url(#pe6b794c777)" d="M 181.686364 227.525478 
-L 207.05 227.525478 
-L 207.05 20.439764 
-L 181.686364 20.439764 
+    <path clip-path="url(#p7fa2889874)" d="M 181.686364 224.64 
+L 207.05 224.64 
+L 207.05 17.554286 
+L 181.686364 17.554286 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_9">
-    <path clip-path="url(#pe6b794c777)" d="M 207.05 227.525478 
-L 232.413636 227.525478 
-L 232.413636 20.526374 
-L 207.05 20.526374 
+    <path clip-path="url(#p7fa2889874)" d="M 207.05 224.64 
+L 232.413636 224.64 
+L 232.413636 39.099408 
+L 207.05 39.099408 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_10">
-    <path clip-path="url(#pe6b794c777)" d="M 232.413636 227.525478 
-L 257.777273 227.525478 
-L 257.777273 88.255788 
-L 232.413636 88.255788 
+    <path clip-path="url(#p7fa2889874)" d="M 232.413636 224.64 
+L 257.777273 224.64 
+L 257.777273 133.566481 
+L 232.413636 133.566481 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_11">
-    <path clip-path="url(#pe6b794c777)" d="M 257.777273 227.525478 
-L 283.140909 227.525478 
-L 283.140909 167.937451 
-L 257.777273 167.937451 
+    <path clip-path="url(#p7fa2889874)" d="M 257.777273 224.64 
+L 283.140909 224.64 
+L 283.140909 193.782334 
+L 257.777273 193.782334 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_12">
-    <path clip-path="url(#pe6b794c777)" d="M 283.140909 227.525478 
-L 308.504545 227.525478 
-L 308.504545 212.022198 
-L 283.140909 212.022198 
+    <path clip-path="url(#p7fa2889874)" d="M 283.140909 224.64 
+L 308.504545 224.64 
+L 308.504545 218.405331 
+L 283.140909 218.405331 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_13">
-    <path clip-path="url(#pe6b794c777)" d="M 308.504545 227.525478 
-L 333.868182 227.525478 
-L 333.868182 223.714616 
-L 308.504545 223.714616 
+    <path clip-path="url(#p7fa2889874)" d="M 308.504545 224.64 
+L 333.868182 224.64 
+L 333.868182 223.929721 
+L 308.504545 223.929721 
 z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_14">
-    <path clip-path="url(#pe6b794c777)" d="M 333.868182 227.525478 
-L 359.231818 227.525478 
-L 359.231818 227.179036 
-L 333.868182 227.179036 
+    <path clip-path="url(#p7fa2889874)" d="M 333.868182 224.64 
+L 359.231818 224.64 
+L 359.231818 224.56108 
+L 333.868182 224.56108 
 z
 " style="fill:#1f77b4;"/>
    </g>
@@ -15796,15 +15794,15 @@ z
       <defs>
        <path d="M 0 0 
 L 0 3.5 
-" id="m56a1ebd3d5" style="stroke:#000000;stroke-width:0.8;"/>
+" id="m44a1a00839" style="stroke:#000000;stroke-width:0.8;"/>
       </defs>
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="76.090353" xlink:href="#m56a1ebd3d5" y="227.525478"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="76.940893" xlink:href="#m44a1a00839" y="224.64"/>
       </g>
      </g>
      <g id="text_1">
       <!-- −0.004 -->
-      <g transform="translate(57.586446 242.123915)scale(0.1 -0.1)">
+      <g transform="translate(58.436987 239.238437)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.59375 35.5 
 L 73.1875 35.5 
@@ -15869,12 +15867,12 @@ z
     <g id="xtick_2">
      <g id="line2d_2">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="141.313965" xlink:href="#m56a1ebd3d5" y="227.525478"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="137.350983" xlink:href="#m44a1a00839" y="224.64"/>
       </g>
      </g>
      <g id="text_2">
       <!-- −0.002 -->
-      <g transform="translate(122.810058 242.123915)scale(0.1 -0.1)">
+      <g transform="translate(118.847077 239.238437)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
 L 53.609375 8.296875 
@@ -15913,12 +15911,12 @@ z
     <g id="xtick_3">
      <g id="line2d_3">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="206.537576" xlink:href="#m56a1ebd3d5" y="227.525478"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="197.761074" xlink:href="#m44a1a00839" y="224.64"/>
       </g>
      </g>
      <g id="text_3">
       <!-- 0.000 -->
-      <g transform="translate(192.223514 242.123915)scale(0.1 -0.1)">
+      <g transform="translate(183.447011 239.238437)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
        <use x="95.410156" xlink:href="#DejaVuSans-48"/>
@@ -15930,12 +15928,12 @@ z
     <g id="xtick_4">
      <g id="line2d_4">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="271.761188" xlink:href="#m56a1ebd3d5" y="227.525478"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="258.171164" xlink:href="#m44a1a00839" y="224.64"/>
       </g>
      </g>
      <g id="text_4">
       <!-- 0.002 -->
-      <g transform="translate(257.447126 242.123915)scale(0.1 -0.1)">
+      <g transform="translate(243.857102 239.238437)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
        <use x="95.410156" xlink:href="#DejaVuSans-48"/>
@@ -15947,12 +15945,12 @@ z
     <g id="xtick_5">
      <g id="line2d_5">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="336.9848" xlink:href="#m56a1ebd3d5" y="227.525478"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="318.581255" xlink:href="#m44a1a00839" y="224.64"/>
       </g>
      </g>
      <g id="text_5">
       <!-- 0.004 -->
-      <g transform="translate(322.670738 242.123915)scale(0.1 -0.1)">
+      <g transform="translate(304.267193 239.238437)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
        <use x="95.410156" xlink:href="#DejaVuSans-48"/>
@@ -15968,15 +15966,15 @@ z
       <defs>
        <path d="M 0 0 
 L -3.5 0 
-" id="m414fa23c15" style="stroke:#000000;stroke-width:0.8;"/>
+" id="mb1166ff028" style="stroke:#000000;stroke-width:0.8;"/>
       </defs>
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#m414fa23c15" y="227.525478"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#mb1166ff028" y="224.64"/>
       </g>
      </g>
      <g id="text_6">
       <!-- 0 -->
-      <g transform="translate(26.2875 231.324697)scale(0.1 -0.1)">
+      <g transform="translate(26.2875 228.439219)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
       </g>
      </g>
@@ -15984,12 +15982,12 @@ L -3.5 0
     <g id="ytick_2">
      <g id="line2d_7">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#m414fa23c15" y="184.220226"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#mb1166ff028" y="185.18007"/>
       </g>
      </g>
      <g id="text_7">
       <!-- 500 -->
-      <g transform="translate(13.5625 188.019445)scale(0.1 -0.1)">
+      <g transform="translate(13.5625 188.979288)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.796875 72.90625 
 L 49.515625 72.90625 
@@ -16025,12 +16023,12 @@ z
     <g id="ytick_3">
      <g id="line2d_8">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#m414fa23c15" y="140.914974"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#mb1166ff028" y="145.720139"/>
       </g>
      </g>
      <g id="text_8">
       <!-- 1000 -->
-      <g transform="translate(7.2 144.714193)scale(0.1 -0.1)">
+      <g transform="translate(7.2 149.519358)scale(0.1 -0.1)">
        <defs>
         <path d="M 12.40625 8.296875 
 L 28.515625 8.296875 
@@ -16056,12 +16054,12 @@ z
     <g id="ytick_4">
      <g id="line2d_9">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#m414fa23c15" y="97.609722"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#mb1166ff028" y="106.260209"/>
       </g>
      </g>
      <g id="text_9">
       <!-- 1500 -->
-      <g transform="translate(7.2 101.408941)scale(0.1 -0.1)">
+      <g transform="translate(7.2 110.059428)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
        <use x="127.246094" xlink:href="#DejaVuSans-48"/>
@@ -16072,12 +16070,12 @@ z
     <g id="ytick_5">
      <g id="line2d_10">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#m414fa23c15" y="54.304471"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#mb1166ff028" y="66.800279"/>
       </g>
      </g>
      <g id="text_10">
       <!-- 2000 -->
-      <g transform="translate(7.2 58.103689)scale(0.1 -0.1)">
+      <g transform="translate(7.2 70.599497)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
        <use x="127.246094" xlink:href="#DejaVuSans-48"/>
@@ -16088,12 +16086,12 @@ z
     <g id="ytick_6">
      <g id="line2d_11">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#m414fa23c15" y="10.999219"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="39.65" xlink:href="#mb1166ff028" y="27.340348"/>
       </g>
      </g>
      <g id="text_11">
       <!-- 2500 -->
-      <g transform="translate(7.2 14.798438)scale(0.1 -0.1)">
+      <g transform="translate(7.2 31.139567)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
        <use x="127.246094" xlink:href="#DejaVuSans-48"/>
@@ -16103,40 +16101,40 @@ z
     </g>
    </g>
    <g id="line2d_12">
-    <path clip-path="url(#pe6b794c777)" d="M 155.068353 227.525478 
-L 155.068353 10.085478 
+    <path clip-path="url(#p7fa2889874)" d="M 150.090294 224.64 
+L 150.090294 7.2 
 " style="fill:none;stroke:#ff0000;stroke-linecap:square;stroke-width:1.5;"/>
    </g>
    <g id="line2d_13">
-    <path clip-path="url(#pe6b794c777)" d="M 258.0068 227.525478 
-L 258.0068 10.085478 
+    <path clip-path="url(#p7fa2889874)" d="M 245.431854 224.64 
+L 245.431854 7.2 
 " style="fill:none;stroke:#ff0000;stroke-linecap:square;stroke-width:1.5;"/>
    </g>
    <g id="patch_15">
-    <path d="M 39.65 227.525478 
-L 39.65 10.085478 
+    <path d="M 39.65 224.64 
+L 39.65 7.2 
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="patch_16">
-    <path d="M 374.45 227.525478 
-L 374.45 10.085478 
+    <path d="M 374.45 224.64 
+L 374.45 7.2 
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="patch_17">
-    <path d="M 39.65 227.525478 
-L 374.45 227.525478 
+    <path d="M 39.65 224.64 
+L 374.45 224.64 
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="patch_18">
-    <path d="M 39.65 10.085478 
-L 374.45 10.085478 
+    <path d="M 39.65 7.2 
+L 374.45 7.2 
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pe6b794c777">
-   <rect height="217.44" width="334.8" x="39.65" y="10.085478"/>
+  <clipPath id="p7fa2889874">
+   <rect height="217.44" width="334.8" x="39.65" y="7.2"/>
   </clipPath>
  </defs>
 </svg>
@@ -16183,7 +16181,7 @@ L 374.45 10.085478
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.9032</pre>
+<pre>0.9065</pre>
 </div>
 
 </div>
@@ -16348,7 +16346,7 @@ Name: converted, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Linear Regression</p>
+<p>Logistic Regression</p>
 
 </div>
 </div>
@@ -16755,10 +16753,10 @@ Name: converted, dtype: int64</pre>
   <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     1</td>   
 </tr>
 <tr>
-  <th>Date:</th>            <td>Fri, 21 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>8.077e-06</td> 
+  <th>Date:</th>            <td>Sun, 23 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>8.077e-06</td> 
 </tr>
 <tr>
-  <th>Time:</th>                <td>16:48:11</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
+  <th>Time:</th>                <td>09:06:20</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
 </tr>
 <tr>
   <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
@@ -16796,7 +16794,8 @@ Name: converted, dtype: int64</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>p-value: .19</p>
-<p>The p-value associated with ab_page in this regression model is different from that computed in part II because the hypotheses and comparisons are different (equal or NOT equal to versus greater to or less than/equal to), so the p-value is all diffs outside of the area bounded by obs_diff and -obs diff. In this case, we fail to reject the null hypothesis.</p>
+<p>The p-value associated with ab_page in this regression model is different from that computed in part II because the hypotheses and comparisons are different (equal or NOT equal to versus greater to or less than/equal to), so the p-value is all diffs outside of the area bounded by obs_diff and -obs diff. In other words, this is a two-sided t-test vs. the one-sided t-test performed in Part II</p>
+<p>In this case, we fail to reject the null hypothesis as the p-value is much greated than the alpha.</p>
 <p>It can still provide a quick glimpse into whether the variable is statistically significant in predicting the response variable.</p>
 
 </div>
@@ -16812,7 +16811,9 @@ Name: converted, dtype: int64</pre>
 <ul>
 <li><p>It's a good idea to consider other factors because they may influence or invalidate the conclusions we draw from our hypotheses and testing.</p>
 </li>
-<li><p>The disadvantage to adding additional predictor terms is that if the terms are correlated with each other, they can distort the regression model p-values and other results. We can use the correlation between predictors or their Variance Inflation Factors to identify and avoid this problem.</p>
+<li><p>The disadvantage to adding additional predictor terms is that if the terms are correlated or multicollinearly related with each other, they can distort the regression model p-values and other results.</p>
+</li>
+<li><p>We can use the correlation between  pairs of predictors or Variance Inflation Factors among multiple predictors to identify and avoid this problem.</p>
 </li>
 </ul>
 
@@ -17135,288 +17136,10 @@ Name: country, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm1</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span> <span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">lm1</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Optimization terminated successfully.
-         Current function value: 0.366116
-         Iterations 6
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table class="simpletable">
-<caption>Logit Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>       <td>converted</td>    <th>  No. Observations:  </th>   <td>290584</td>   
-</tr>
-<tr>
-  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290581</td>   
-</tr>
-<tr>
-  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     2</td>   
-</tr>
-<tr>
-  <th>Date:</th>            <td>Fri, 21 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>1.521e-05</td> 
-</tr>
-<tr>
-  <th>Time:</th>                <td>16:56:46</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
-</tr>
-<tr>
-  <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
-</tr>
-<tr>
-  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td>0.1984</td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>intercept</th> <td>   -1.9868</td> <td>    0.011</td> <td> -174.174</td> <td> 0.000</td> <td>   -2.009</td> <td>   -1.964</td>
-</tr>
-<tr>
-  <th>CA</th>        <td>   -0.0507</td> <td>    0.028</td> <td>   -1.786</td> <td> 0.074</td> <td>   -0.106</td> <td>    0.005</td>
-</tr>
-<tr>
-  <th>US</th>        <td>   -0.0099</td> <td>    0.013</td> <td>   -0.746</td> <td> 0.456</td> <td>   -0.036</td> <td>    0.016</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm2</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span> <span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">lm2</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Optimization terminated successfully.
-         Current function value: 0.366116
-         Iterations 6
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table class="simpletable">
-<caption>Logit Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>       <td>converted</td>    <th>  No. Observations:  </th>   <td>290584</td>   
-</tr>
-<tr>
-  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290581</td>   
-</tr>
-<tr>
-  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     2</td>   
-</tr>
-<tr>
-  <th>Date:</th>            <td>Fri, 21 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>1.521e-05</td> 
-</tr>
-<tr>
-  <th>Time:</th>                <td>16:56:49</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
-</tr>
-<tr>
-  <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
-</tr>
-<tr>
-  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td>0.1984</td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>intercept</th> <td>   -1.9967</td> <td>    0.007</td> <td> -292.314</td> <td> 0.000</td> <td>   -2.010</td> <td>   -1.983</td>
-</tr>
-<tr>
-  <th>CA</th>        <td>   -0.0408</td> <td>    0.027</td> <td>   -1.518</td> <td> 0.129</td> <td>   -0.093</td> <td>    0.012</td>
-</tr>
-<tr>
-  <th>UK</th>        <td>    0.0099</td> <td>    0.013</td> <td>    0.746</td> <td> 0.456</td> <td>   -0.016</td> <td>    0.036</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm3</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">lm3</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Optimization terminated successfully.
-         Current function value: 0.366116
-         Iterations 6
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table class="simpletable">
-<caption>Logit Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>       <td>converted</td>    <th>  No. Observations:  </th>   <td>290584</td>   
-</tr>
-<tr>
-  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290581</td>   
-</tr>
-<tr>
-  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     2</td>   
-</tr>
-<tr>
-  <th>Date:</th>            <td>Fri, 21 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>1.521e-05</td> 
-</tr>
-<tr>
-  <th>Time:</th>                <td>16:56:54</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
-</tr>
-<tr>
-  <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
-</tr>
-<tr>
-  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td>0.1984</td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>intercept</th> <td>   -2.0375</td> <td>    0.026</td> <td>  -78.364</td> <td> 0.000</td> <td>   -2.088</td> <td>   -1.987</td>
-</tr>
-<tr>
-  <th>UK</th>        <td>    0.0507</td> <td>    0.028</td> <td>    1.786</td> <td> 0.074</td> <td>   -0.005</td> <td>    0.106</td>
-</tr>
-<tr>
-  <th>US</th>        <td>    0.0408</td> <td>    0.027</td> <td>    1.518</td> <td> 0.129</td> <td>   -0.012</td> <td>    0.093</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>None of the p-values for any country are beneath our alpha threshold, therefore it does not appear that user's country has an affect on conversion rate.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>h. Though you have now looked at the individual factors of country and page on conversion, we would now like to look at an interaction between page and country to see if there significant effects on conversion.  Create the necessary additional columns, and fit the new model.</p>
-<p>Provide the summary results, and your conclusions based on the results.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Fit Your Linear Model And Obtain the Results</span>
-<span class="n">lm4</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span> <span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;ab_page&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm4</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span> <span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;ab_page&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 <span class="n">lm4</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
@@ -17447,7 +17170,7 @@ Name: country, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[59]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
 
 
 
@@ -17464,10 +17187,10 @@ Name: country, dtype: int64</pre>
   <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     3</td>   
 </tr>
 <tr>
-  <th>Date:</th>            <td>Fri, 21 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>2.323e-05</td> 
+  <th>Date:</th>            <td>Sun, 23 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>2.323e-05</td> 
 </tr>
 <tr>
-  <th>Time:</th>                <td>17:47:03</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
+  <th>Time:</th>                <td>09:25:18</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
 </tr>
 <tr>
   <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
@@ -17501,14 +17224,29 @@ Name: country, dtype: int64</pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>There are no p-values that fit below our alpha threshhold, so once again we fail to reject the null hypothesis. It does not appear that user's country has an affect on conversion rate.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>h. Though you have now looked at the individual factors of country and page on conversion, we would now like to look at an interaction between page and country to see if there significant effects on conversion.  Create the necessary additional columns, and fit the new model.</p>
+<p>Provide the summary results, and your conclusions based on the results.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm5</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span> <span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">,</span> <span class="s1">&#39;ab_page&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">lm5</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_CA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_page&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_US&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_page&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;US&#39;</span><span class="p">]</span>
+<span class="n">lm3</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span> <span class="s1">&#39;ab_page&#39;</span><span class="p">,</span> <span class="s1">&#39;CA&#39;</span> <span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;ab_CA&#39;</span><span class="p">,</span> <span class="s1">&#39;ab_US&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">lm3</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -17529,7 +17267,7 @@ Name: country, dtype: int64</pre>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Optimization terminated successfully.
-         Current function value: 0.366113
+         Current function value: 0.366109
          Iterations 6
 </pre>
 </div>
@@ -17538,7 +17276,7 @@ Name: country, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
 
 
 
@@ -17549,22 +17287,22 @@ Name: country, dtype: int64</pre>
   <th>Dep. Variable:</th>       <td>converted</td>    <th>  No. Observations:  </th>   <td>290584</td>   
 </tr>
 <tr>
-  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290580</td>   
+  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290578</td>   
 </tr>
 <tr>
-  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     3</td>   
+  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     5</td>   
 </tr>
 <tr>
-  <th>Date:</th>            <td>Fri, 21 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>2.323e-05</td> 
+  <th>Date:</th>            <td>Sun, 23 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>3.482e-05</td> 
 </tr>
 <tr>
-  <th>Time:</th>                <td>17:47:33</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
+  <th>Time:</th>                <td>09:46:29</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
 </tr>
 <tr>
   <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
 </tr>
 <tr>
-  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td>0.1760</td>   
+  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td>0.1920</td>   
 </tr>
 </table>
 <table class="simpletable">
@@ -17572,16 +17310,22 @@ Name: country, dtype: int64</pre>
       <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>intercept</th> <td>   -1.9893</td> <td>    0.009</td> <td> -223.763</td> <td> 0.000</td> <td>   -2.007</td> <td>   -1.972</td>
+  <th>intercept</th> <td>   -1.9922</td> <td>    0.016</td> <td> -123.457</td> <td> 0.000</td> <td>   -2.024</td> <td>   -1.961</td>
 </tr>
 <tr>
-  <th>CA</th>        <td>   -0.0408</td> <td>    0.027</td> <td>   -1.516</td> <td> 0.130</td> <td>   -0.093</td> <td>    0.012</td>
+  <th>ab_page</th>   <td>    0.0108</td> <td>    0.023</td> <td>    0.475</td> <td> 0.635</td> <td>   -0.034</td> <td>    0.056</td>
 </tr>
 <tr>
-  <th>UK</th>        <td>    0.0099</td> <td>    0.013</td> <td>    0.743</td> <td> 0.457</td> <td>   -0.016</td> <td>    0.036</td>
+  <th>CA</th>        <td>   -0.0118</td> <td>    0.040</td> <td>   -0.296</td> <td> 0.767</td> <td>   -0.090</td> <td>    0.066</td>
 </tr>
 <tr>
-  <th>ab_page</th>   <td>   -0.0149</td> <td>    0.011</td> <td>   -1.307</td> <td> 0.191</td> <td>   -0.037</td> <td>    0.007</td>
+  <th>US</th>        <td>    0.0057</td> <td>    0.019</td> <td>    0.306</td> <td> 0.760</td> <td>   -0.031</td> <td>    0.043</td>
+</tr>
+<tr>
+  <th>ab_CA</th>     <td>   -0.0783</td> <td>    0.057</td> <td>   -1.378</td> <td> 0.168</td> <td>   -0.190</td> <td>    0.033</td>
+</tr>
+<tr>
+  <th>ab_US</th>     <td>   -0.0314</td> <td>    0.027</td> <td>   -1.181</td> <td> 0.238</td> <td>   -0.084</td> <td>    0.021</td>
 </tr>
 </table>
 </div>
@@ -17595,11 +17339,10 @@ Name: country, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm6</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;ab_page&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">lm6</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.0783</span><span class="p">),</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.0314</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -17615,66 +17358,13 @@ Name: country, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Optimization terminated successfully.
-         Current function value: 0.366113
-         Iterations 6
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table class="simpletable">
-<caption>Logit Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>       <td>converted</td>    <th>  No. Observations:  </th>   <td>290584</td>   
-</tr>
-<tr>
-  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290580</td>   
-</tr>
-<tr>
-  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     3</td>   
-</tr>
-<tr>
-  <th>Date:</th>            <td>Fri, 21 May 2021</td> <th>  Pseudo R-squ.:     </th>  <td>2.323e-05</td> 
-</tr>
-<tr>
-  <th>Time:</th>                <td>17:47:53</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
-</tr>
-<tr>
-  <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
-</tr>
-<tr>
-  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td>0.1760</td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>intercept</th> <td>   -2.0300</td> <td>    0.027</td> <td>  -76.249</td> <td> 0.000</td> <td>   -2.082</td> <td>   -1.978</td>
-</tr>
-<tr>
-  <th>UK</th>        <td>    0.0506</td> <td>    0.028</td> <td>    1.784</td> <td> 0.074</td> <td>   -0.005</td> <td>    0.106</td>
-</tr>
-<tr>
-  <th>US</th>        <td>    0.0408</td> <td>    0.027</td> <td>    1.516</td> <td> 0.130</td> <td>   -0.012</td> <td>    0.093</td>
-</tr>
-<tr>
-  <th>ab_page</th>   <td>   -0.0149</td> <td>    0.011</td> <td>   -1.307</td> <td> 0.191</td> <td>   -0.037</td> <td>    0.007</td>
-</tr>
-</table>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(1.0814470441230692, 1.0318981806179213)</pre>
 </div>
 
 </div>
@@ -17686,7 +17376,15 @@ Name: country, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Finally, there are no p-values that fit below our alpha threshhold, so once again we fail to reject the null hypothesis. The company should continue to use the old page.</p>
+<p>The interaction coefficients are almost equal, so we can conclude that there is no significant effect on conversion rates based on the user's country.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="CONCLUSION">CONCLUSION<a class="anchor-link" href="#CONCLUSION">&#182;</a></h1><p>In all of the above tests, we have failed to reject the null hypothesis: the conversion rates for the old and new pages are not significantly different.</p>
+<p>We recommend that the company continues to use the old landing page globally, as the new page does not significantly increase conversion rate when not accounting for user's country, nor when we consider conversion rates based on the user's country.</p>
+<p>It may also be useful to investigate whether time of day of the visit has a significant affect on conversion rate for each landing page.</p>
 
 </div>
 </div>
